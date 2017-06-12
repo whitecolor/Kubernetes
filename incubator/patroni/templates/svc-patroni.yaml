@@ -7,11 +7,8 @@ metadata:
     release: {{ .Release.Name | quote }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
     component: "{{.Release.Name}}-{{.Values.Component}}"
-  annotations:
-    "helm.sh/created": {{.Release.Time.Seconds | quote }}
 spec:
-  selector:
-    component: "{{.Release.Name}}-{{.Values.Component}}"
-    spilo-role: master
+  type: ClusterIP
   ports:
   - port: 5432
+    targetPort: 5432

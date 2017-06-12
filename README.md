@@ -51,6 +51,20 @@ We'd love for you to contribute a Chart that provides a useful application or se
 Note: We use the same [workflow](https://github.com/kubernetes/kubernetes/blob/master/docs/devel/development.md#git-setup),
 [License](LICENSE) and [Contributor License Agreement](CONTRIBUTING.md) as the main Kubernetes repository.
 
+## Review Process
+
+The following outlines the review procedure used by the Chart repository maintainers. Github labels are used to indicate state change during the review process. 
+
+* ***AWAITING REVIEW*** - Initial triage which indicates that the PR is ready for review by the maintainers team. The CLA must be signed and e2e tests must pass in-order to move to this state
+* ***CHANGES NEEDED*** - Review completed by at least one maintainer and changes needed by contributor (explicit even when using the review feature of Github)
+* ***CODE REVIEWED*** - The chart structure has been reviewed and found to be satisfactory given the [technical requirements](CONTRIBUTING.md#technical-requirements) (may happen in parallel to UX REVIEWED)
+* ***UX REVIEWED*** - The chart installation UX has been reviewed and found to be satisfactory. (may happen in parallel to CODE REVIEWED)
+* ***LGTM*** - Added ONLY once both UX/CODE reviewed are both present. Merge must be handled by someone OTHER than the maintainer that added the LGTM label. This label indicates that given a quick pass of the comments this change is ready to merge
+
+### Stale Pull Requests
+
+After initial review feedback, if no updates have been made to the pull request for 1 week, the `stale` label will be added. If after another week there are still no updates it will be closed. Please re-open if/when you have made the proper adjustments.
+
 ## Status of the Project
 
 This project is still under active development, so you might run into [issues](https://github.com/kubernetes/charts/issues). If you do, please don't be shy about letting us know, or better yet, contribute a fix or feature.
